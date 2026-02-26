@@ -13,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace VinylRecordsApplication.Pages.Manufacturer
+namespace VinylRecordsApplication.Pages.Manufacturer.Elements
 {
     /// <summary>
-    /// Логика взаимодействия для Main.xaml
+    /// Логика взаимодействия для Manufacturer.xaml
     /// </summary>
-    public partial class Main : Page
+    public partial class Manufacturer : UserControl
     {
-        public IEnumerable<Classes.Manufacturer> AllManufacturers = Classes.Manufacturer.AllManufacturers();
-        public Main()
+        public Manufacturer()
         {
             InitializeComponent();
-            foreach (Classes.Manufacturer manufacturer in AllManufacturers)
-                manufacturerParent.Children.Add(new Manufacturer.Elements.Manufacturer(manufacturer,this));
         }
     }
 }
