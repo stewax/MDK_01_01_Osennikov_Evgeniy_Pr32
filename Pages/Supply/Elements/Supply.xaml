@@ -1,0 +1,181 @@
+﻿<UserControl x:Class="VinylRecordsApplication.Pages.Supply.Elements.Supply"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VinylRecordsApplication.Pages.Supply.Elements"
+             mc:Ignorable="d">
+    <Grid>
+        <!-- Рамка вокруг всей карточки поставки -->
+        <Border BorderBrush="#FFFAFAFA" 
+                Margin="0,0,0,20" 
+                BorderThickness="1" 
+                Background="#FFFAFAFA" 
+                CornerRadius="20" 
+                VerticalAlignment="Top" 
+                Height="160">
+
+            <!-- Эффект тени для рамки -->
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" 
+                                  Color="Black" 
+                                  Direction="315" 
+                                  ShadowDepth="5" 
+                                  Opacity="0.5"/>
+            </Border.Effect>
+
+            <!-- Внутренняя сетка для размещения элементов -->
+            <Grid Margin="15">
+
+                <!-- Изображение поставки -->
+                <Image Width="68" 
+                       Height="68" 
+                       VerticalAlignment="Top" 
+                       HorizontalAlignment="Left" 
+                       Source="/Image/ic_supply.png"/>
+
+                <!-- Кнопка "Изменить" -->
+                <Button Content="Изменить" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" 
+                        Width="68" 
+                        Height="25" 
+                        BorderBrush="#FFFF9800" 
+                        Background="#FFFF9800" 
+                        Foreground="White" 
+                        FontWeight="Bold" 
+                        Margin="0,73,0,0" 
+                        Click="EditSupply">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="10" 
+                                          Color="Black" 
+                                          Direction="315" 
+                                          ShadowDepth="2" 
+                                          Opacity="0.5"/>
+                    </Button.Effect>
+                </Button>
+
+                <!-- Кнопка "Удалить" -->
+                <Button Content="Удалить" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" 
+                        Width="68" 
+                        Height="25" 
+                        BorderBrush="Red" 
+                        Background="Red" 
+                        Foreground="White" 
+                        FontWeight="Bold" 
+                        Margin="0,103,0,0" 
+                        Click="DeleteSupply">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="10" 
+                                          Color="Black" 
+                                          Direction="315" 
+                                          ShadowDepth="2" 
+                                          Opacity="0.5"/>
+                    </Button.Effect>
+                </Button>
+
+                <!-- Сетка для полей информации о поставке -->
+                <Grid Margin="73,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Наименование поставщика -->
+                    <Label Content="#Наименование поставщика:" 
+                           Margin="0,0,10,0" 
+                           VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbManufacturer" 
+                             IsEnabled="False" 
+                             Margin="0,26,10,0" 
+                             Height="50" 
+                             TextWrapping="Wrap" 
+                             Text="" 
+                             VerticalContentAlignment="Center" 
+                             VerticalAlignment="Top" 
+                             Padding="10, 0">
+                        <TextBox.Effect>
+                            <DropShadowEffect BlurRadius="10" 
+                                              Color="Black" 
+                                              Direction="315" 
+                                              ShadowDepth="2" 
+                                              Opacity="0.5"/>
+                        </TextBox.Effect>
+                    </TextBox>
+
+                    <!-- Дата поставки -->
+                    <Label Content="#Дата поставки:" 
+                           Margin="0,77,10,0" 
+                           VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbDateDelivery" 
+                             IsEnabled="False" 
+                             Margin="0,103,10,0" 
+                             Height="25" 
+                             TextWrapping="Wrap" 
+                             Text="" 
+                             VerticalContentAlignment="Center" 
+                             VerticalAlignment="Top" 
+                             Padding="10, 0">
+                        <TextBox.Effect>
+                            <DropShadowEffect BlurRadius="10" 
+                                              Color="Black" 
+                                              Direction="315" 
+                                              ShadowDepth="2" 
+                                              Opacity="0.5"/>
+                        </TextBox.Effect>
+                    </TextBox>
+
+                    <!-- Наименование пластинки -->
+                    <Label Content="#Наименование пластинки:" 
+                           Margin="10,0,10,0" 
+                           VerticalAlignment="Top" 
+                           Grid.Column="1"/>
+                    <TextBox x:Name="tbRecord" 
+                             IsEnabled="False" 
+                             Margin="10,26,10,0" 
+                             Height="46" 
+                             TextWrapping="Wrap" 
+                             Text="" 
+                             VerticalContentAlignment="Center" 
+                             VerticalAlignment="Top" 
+                             Padding="10, 0" 
+                             Grid.Column="1">
+                        <TextBox.Effect>
+                            <DropShadowEffect BlurRadius="10" 
+                                              Color="Black" 
+                                              Direction="315" 
+                                              ShadowDepth="2" 
+                                              Opacity="0.5"/>
+                        </TextBox.Effect>
+                    </TextBox>
+
+                    <!-- Количество поставки -->
+                    <Label Content="#Количество поставки:" 
+                           Margin="10,77,10,0" 
+                           VerticalAlignment="Top" 
+                           Grid.Column="1"/>
+                    <TextBox x:Name="tbCount" 
+                             IsEnabled="False" 
+                             Margin="10,103,10,0" 
+                             Height="25" 
+                             TextWrapping="Wrap" 
+                             Text="" 
+                             VerticalContentAlignment="Center" 
+                             VerticalAlignment="Top" 
+                             Padding="10, 0" 
+                             Grid.Column="1">
+                        <TextBox.Effect>
+                            <DropShadowEffect BlurRadius="10" 
+                                              Color="Black" 
+                                              Direction="315" 
+                                              ShadowDepth="2" 
+                                              Opacity="0.5"/>
+                        </TextBox.Effect>
+                    </TextBox>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
