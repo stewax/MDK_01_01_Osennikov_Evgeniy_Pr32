@@ -25,6 +25,11 @@ namespace VinylRecordsApplication
             InitializeComponent();
         }
 
+        public void OpenPage(Page pages)
+        {
+            frame.Navigate(pages);
+        }
+
         private void OpenRecordList(object sender, RoutedEventArgs e)
         {
 
