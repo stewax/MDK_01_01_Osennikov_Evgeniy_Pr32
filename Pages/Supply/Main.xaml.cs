@@ -25,7 +25,10 @@ namespace VinylRecordsApplication.Pages.Supply
         {
             InitializeComponent();
             foreach (var supply in AllSupplies)
-                supplyParent.Children.Add(new Pages.Supply.Elements.Supply(supply, this);
+            {
+                supplyParent.Children.Add(new Pages.Supply.Elements.Supply(supply, this));
+            }
+                
         }
     }
 }

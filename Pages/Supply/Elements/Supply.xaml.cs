@@ -44,7 +44,7 @@ namespace VinylRecordsApplication.Pages.Supply.Elements
         }
         private void EditSupply(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainwindow.OpenPage(new Pages.Supply.Add(this.supply));
+            MainWindow.mainWindow.OpenPage(new Pages.Supply.Add(this.supply));
         }
         private void DeleteSupply(object sender, RoutedEventArgs e)
         {

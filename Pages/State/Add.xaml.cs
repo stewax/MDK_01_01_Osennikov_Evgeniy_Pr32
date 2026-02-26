@@ -21,7 +21,7 @@ namespace VinylRecordsApplication.Pages.State
     public partial class Add : Page
     {
         private Classes.State changeState;
-        public Add(Classes.State state)
+        public Add(Classes.State state = null)
         {
             InitializeComponent();
             if (state != null)

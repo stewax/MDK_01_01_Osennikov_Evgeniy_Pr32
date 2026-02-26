@@ -92,7 +92,7 @@ namespace VinylRecordsApplication.Pages.Records
                                 newRecord.Save();
 
                                 MessageBox.Show($"Пластинка '{newRecord.Name}' успешно добавлена.", "Уведомление");
-                                MainWindow.mainwindow.OpenPage(new Pages.Records.Add(newRecord));
+                                MainWindow.mainWindow.OpenPage(new Pages.Records.Add(newRecord));
                             }
                             else
                             {

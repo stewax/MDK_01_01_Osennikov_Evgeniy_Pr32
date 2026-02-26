@@ -60,7 +60,7 @@ namespace VinylRecordsApplication.Pages.Records.Elements
         }
         private void EditRecord(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainwindow.OpenPage(new Add(this.record));
+            MainWindow.mainWindow.OpenPage(new Add(this.record));
         }
         private void DeleteRecord(object sender, RoutedEventArgs e)
         {

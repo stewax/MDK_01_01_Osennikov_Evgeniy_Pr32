@@ -80,7 +80,7 @@ namespace VinylRecordsApplication.Pages.Supply
                         newSupply.Save();
 
                         MessageBox.Show($"Поставка №{newSupply.Id} успешно добавлена.", "Уведомление");
-                        MainWindow.mainwindow.OpenPage(new Pages.Supply.Add(newSupply));
+                        MainWindow.mainWindow.OpenPage(new Pages.Supply.Add(newSupply));
                     }
                     else
                     {
